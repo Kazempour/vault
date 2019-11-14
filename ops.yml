@@ -1,0 +1,11 @@
+version: "1"
+ops:
+  - name:
+      vault
+    description:
+      An OPS to configure and work with HashiCorp Vault
+    public:
+      true
+    sourceCodeURL: "https://github.com/Kazempour/vault"
+    run:
+      vault
