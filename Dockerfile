@@ -1,19 +1,20 @@
 ############################
 # Build container
 ############################
-FROM golang:1.13-alpine AS dep
+FROM golang:1.13-stretch AS dep
 
-WORKDIR /ops
+WORKDIR /go
 
-ADD . .
+ADD vault.go .
+ADD vendor/ /go/src/
 
 RUN go build vault.go
 
 ############################
 # Final container
 ############################
-FROM alpine:latest
+FROM registry.cto.ai/official_images/base:latest
 
 WORKDIR /ops
 
-COPY --from=dep /ops/vault /usr/local/bin/vault
+COPY --from=dep /go/vault /usr/local/bin/vault
