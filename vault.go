@@ -158,7 +158,7 @@ func argsHandler(args []string, sdk *Sdk) error {
 
 	app.Name = "vault"
 	app.Usage = "An OPS to work with HashiCorp Vault"
-	app.Version = "0.1.0"
+	app.Version = "0.1.1"
 
 	app.Flags = []cli.Flag{
 		cli.StringFlag{

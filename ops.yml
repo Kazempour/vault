@@ -1,8 +1,9 @@
 version: "1"
 commands:
-  - name: vault:0.1.0
+  - name: vault:0.1.1
     description: An OPS to configure and work with HashiCorp Vault
     public: true
+    remote: true
     sourceCodeURL: "https://github.com/kazempour/vault"
     run: vault
     sdk: "2"
