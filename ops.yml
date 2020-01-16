@@ -1,6 +1,6 @@
 version: "1"
 commands:
-  - name: vault:0.1.1
+  - name: vault:0.1.2
     description: An OPS to configure and work with HashiCorp Vault
     public: true
     remote: true

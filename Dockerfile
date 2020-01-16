@@ -17,4 +17,5 @@ FROM registry.cto.ai/official_images/base:latest
 
 WORKDIR /ops
 
+RUN apt-get update && apt-get install ca-certificates -y
 COPY --from=dep /go/vault /usr/local/bin/vault
